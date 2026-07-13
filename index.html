@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff6fa8" />
+  <title>Catch the Hearts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="intro-screen active" id="introScreen">
+      <div class="floating-bg" aria-hidden="true">
+        <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      </div>
+
+      <div class="intro-card">
+        <div class="mini-heart">❤</div>
+        <p class="eyebrow">A LITTLE GAME FOR YOU</p>
+        <h1>Catch the Hearts</h1>
+        <p class="intro-text">
+          Move the basket and catch as many hearts as you can.
+          Reach <strong>15 hearts</strong> to unlock a surprise.
+        </p>
+
+        <div class="controls-note">
+          <span>Desktop: move your mouse or use ← →</span>
+          <span>Mobile: drag the basket</span>
+        </div>
+
+        <button id="startButton" type="button">Start Game</button>
+        <p class="signature">@Merkie</p>
+      </div>
+    </section>
+
+    <section class="game-screen" id="gameScreen" aria-label="Catch the hearts game">
+      <div class="game-topbar">
+        <div class="stat-card">
+          <span class="stat-label">Score</span>
+          <strong id="scoreValue">0 / 15</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Lives</span>
+          <strong id="livesValue">❤ ❤ ❤</strong>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="game-area" id="gameArea">
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="sparkles" id="sparkles"></div>
+
+        <div class="basket" id="basket" aria-label="Heart basket">
+          <div class="basket-handle"></div>
+          <div class="basket-body">
+            <span>❤</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="game-hint" id="gameHint">Catch the falling hearts!</p>
+    </section>
+
+    <section class="result-screen" id="resultScreen">
+      <div class="confetti" id="confetti"></div>
+
+      <div class="result-card">
+        <div class="big-heart" aria-hidden="true">
+          <span>❤</span>
+        </div>
+
+        <p class="eyebrow">SURPRISE UNLOCKED</p>
+        <h2>You already caught mine.</h2>
+        <p>
+          You did not need to catch every heart on the screen,
+          because the most important one was already yours.
+        </p>
+
+        <div class="final-note">
+          <span>❤</span>
+          <p>You deserve to be loved, appreciated, and treasured.</p>
+        </div>
+
+        <button id="playAgainButton" type="button">Play Again</button>
+        <p class="signature">@Merkie</p>
+      </div>
+    </section>
+
+    <section class="game-over-screen" id="gameOverScreen">
+      <div class="result-card">
+        <div class="sad-heart">♡</div>
+        <p class="eyebrow">ALMOST THERE</p>
+        <h2>The hearts slipped away!</h2>
+        <p>Try again and catch 15 hearts to reveal the surprise.</p>
+        <button id="retryButton" type="button">Try Again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
